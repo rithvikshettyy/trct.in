@@ -78,7 +78,7 @@ export function CultSection() {
             },
             {
               quote: "The energy here is INSANE. Best decision I made this year.",
-              name: "SNEHA, 19",
+              name: "OJAL SHETTY, 19",
             },
           ].map((testimonial, i) => (
             <div key={i} className="bg-primary/10 border-2 border-primary p-6">
