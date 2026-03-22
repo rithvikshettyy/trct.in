@@ -59,7 +59,7 @@ export function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto text-center">
         {/* Location badge */}
         <div className="inline-block mb-8 px-6 py-2 border-2 border-white">
-          <span className="font-mono text-sm md:text-base tracking-wider">THANE · MAHARASHTRA</span>
+          <span className="font-mono text-xs sm:text-sm md:text-base tracking-widest font-black">THANE'S BIGGEST RUNNING COMMUNITY</span>
         </div>
 
         {/* Main heading with glitch effect */}
@@ -68,9 +68,9 @@ export function Hero() {
         </h1>
 
         {/* Tagline */}
-        <div className="relative mb-12 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
-          <span className="text-lg sm:text-xl md:text-3xl font-mono font-bold tracking-wider mt-1">NOT A CLUB —</span>
-          <span className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tight leading-none">A CULT.</span>
+        <div className="relative mb-12 flex flex-wrap items-center justify-center gap-2 sm:gap-4 px-2">
+          <span className="text-base sm:text-xl md:text-3xl font-mono font-bold tracking-wider mt-1 opacity-80">NOT A CLUB —</span>
+          <span className="text-3xl sm:text-5xl md:text-7xl font-black tracking-tight leading-none text-white">A CULT.</span>
         </div>
 
         {/* CTA */}

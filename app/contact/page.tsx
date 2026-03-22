@@ -44,14 +44,14 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="mb-16">
-            <h1 className="text-6xl md:text-7xl font-black text-primary mb-4 text-balance">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl font-black text-primary mb-4 text-balance leading-[0.9] tracking-tighter">
               LET'S
               <br />
               COLLABORATE
             </h1>
             <div className="w-12 h-3 bg-primary mb-6"></div>
             <p className="text-xl font-mono text-gray-700 max-w-2xl">
-              Whether you want to sponsor us, collaborate, or just want to chat about running cult energy—we're all
+              Whether you want to sponsor us, collaborate, or just want to chat about running cult energy; we're all
               ears.
             </p>
           </div>
@@ -86,7 +86,14 @@ export default function ContactPage() {
                     <Instagram className="w-6 h-6 text-primary" />
                     <p className="font-black text-gray-900">SOCIAL</p>
                   </div>
-                  <p className="font-mono text-gray-700">@therunclubthane</p>
+                  <a
+                    href="https://www.instagram.com/trct.in"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-mono text-gray-700 hover:text-primary transition-colors"
+                  >
+                    @trct.in
+                  </a>
                 </div>
               </div>
 

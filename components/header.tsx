@@ -59,47 +59,50 @@ export function Header() {
       </nav>
 
       {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div className="md:hidden bg-primary border-t-2 border-white">
-          <div className="px-4 py-6 space-y-4">
-            <Link
-              href="/events"
-              className="block text-white font-mono text-sm hover:opacity-70 transition-opacity py-2"
-              onClick={() => setMobileMenuOpen(false)}
+      <div 
+        className={`md:hidden absolute top-full left-0 right-0 bg-primary border-t-2 border-white transition-all duration-300 ease-in-out overflow-hidden ${
+          mobileMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0 pointer-events-none"
+        }`}
+      >
+        <div className="px-6 py-8 space-y-6">
+          <Link
+            href="/events"
+            className="block text-white font-mono text-xl font-black hover:translate-x-2 transition-transform py-2 border-b border-white/20"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            EVENTS
+          </Link>
+          <Link
+            href="/about"
+            className="block text-white font-mono text-xl font-black hover:translate-x-2 transition-transform py-2 border-b border-white/20"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            ABOUT
+          </Link>
+          <Link
+            href="/contact"
+            className="block text-white font-mono text-xl font-black hover:translate-x-2 transition-transform py-2 border-b border-white/20"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            COLLAB
+          </Link>
+          <a
+            href="https://chat.whatsapp.com/GlZwMFVjvU2EZ9kNnVzuCI?mode=wwt&utm_source=igios&utm_campaign=wa_communities_url_xma&source_surface=25&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcXBfaWQPNTY3MDY3MzQzMzUyNDI3AAGnmBoH1VPrrkVMSq2Mr6IMIJ3JmvXw0UHk1d9iQwaHYg-jDDhGgEQaWU0sXDc_aem_Wbsg3hXzAeD68ZUcS7DiyA"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMobileMenuOpen(false)}
+            className="block pt-4"
+          >
+            <Button
+              size="lg"
+              variant="secondary"
+              className="w-full font-black text-lg border-2 border-white bg-white text-primary hover:bg-white/90 py-6"
             >
-              EVENTS
-            </Link>
-            <Link
-              href="/about"
-              className="block text-white font-mono text-sm hover:opacity-70 transition-opacity py-2"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              ABOUT
-            </Link>
-            <Link
-              href="/contact"
-              className="block text-white font-mono text-sm hover:opacity-70 transition-opacity py-2"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              COLLAB
-            </Link>
-            <a
-              href="https://chat.whatsapp.com/GlZwMFVjvU2EZ9kNnVzuCI?mode=wwt&utm_source=igios&utm_campaign=wa_communities_url_xma&source_surface=25&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcXBfaWQPNTY3MDY3MzQzMzUyNDI3AAGnmBoH1VPrrkVMSq2Mr6IMIJ3JmvXw0UHk1d9iQwaHYg-jDDhGgEQaWU0sXDc_aem_Wbsg3hXzAeD68ZUcS7DiyA"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              <Button
-                size="sm"
-                variant="secondary"
-                className="w-full font-bold border-2 border-white bg-white text-primary hover:bg-white/90"
-              >
-                JOIN THE CULT
-              </Button>
-            </a>
-          </div>
+              JOIN THE CULT
+            </Button>
+          </a>
         </div>
-      )}
+      </div>
     </header>
   )
 }

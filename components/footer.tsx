@@ -7,8 +7,8 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <div className="mb-8">
-              <Logo className="scale-[0.8] origin-left" />
+            <div className="mb-5">
+              <Logo className="scale-[0.65] origin-left" />
             </div>
             <p className="text-sm opacity-70 leading-relaxed">
               Not a club. A cult.
@@ -47,9 +47,9 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t-2 border-primary/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm font-mono">© 2026 THE RUN CLUB THANE. ALL RIGHTS RESERVED.</p>
-          <p className="text-sm opacity-70">BUILT WITH PURE ENERGY</p>
+        <div className="border-t-2 border-primary/20 pt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+          <p className="text-xs sm:text-sm font-mono text-left">© 2026 THE RUN CLUB THANE. ALL RIGHTS RESERVED.</p>
+          <p className="text-xs sm:text-sm opacity-70 text-left">BUILT WITH PURE ENERGY</p>
         </div>
 
         {/* Large watermark */}

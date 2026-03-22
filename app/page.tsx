@@ -15,7 +15,7 @@ export default function Home() {
       <Hero />
       <Marquee text="EVERY SUNDAY · 7AM · THANE" />
       <EventsSection />
-      <Marquee text="RUN WITH US · JOIN THE MOVEMENT · FEEL THE ENERGY" direction="reverse" />
+      <Marquee text="THANE'S BIGGEST RUNNING COMMUNITY · JOIN THE MOVEMENT · FEEL THE ENERGY" direction="reverse" />
       <CultSection />
       <GallerySection />
       <SponsorsSection />

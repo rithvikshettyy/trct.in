@@ -25,7 +25,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto">
           {/* Header Section */}
           <div className="mb-16">
-            <h1 className="text-6xl md:text-7xl font-black text-primary mb-4 text-balance">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-black text-primary mb-4 text-balance leading-[0.9]">
               NOT JUST A
               <br />
               CLUB
@@ -116,25 +116,27 @@ export default function AboutPage() {
           </div>
 
           {/* Stats Section */}
-          <div className="grid grid-cols-3 gap-4 md:gap-8 bg-primary text-white p-8 md:p-12 border-4 border-white mb-16">
-            <div className="text-center">
-              <p className="text-4xl md:text-5xl font-black">500+</p>
-              <p className="font-mono text-sm mt-2">Active Members</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0 bg-primary text-white p-10 md:p-12 border-4 border-white mb-16">
+            <div className="text-center md:border-r-2 border-white/30 md:px-4">
+              <p className="text-5xl md:text-5xl lg:text-6xl font-black">500+</p>
+              <p className="font-mono text-sm uppercase tracking-widest mt-2 opacity-90">Active Members</p>
             </div>
-            <div className="text-center border-l-2 border-r-2 border-white px-4">
-              <p className="text-4xl md:text-5xl font-black">52</p>
-              <p className="font-mono text-sm mt-2">Events Hosted</p>
+            <div className="text-center md:border-r-2 border-white/30 md:px-4">
+              <p className="text-5xl md:text-5xl lg:text-6xl font-black">52</p>
+              <p className="font-mono text-sm uppercase tracking-widest mt-2 opacity-90">Events Hosted</p>
             </div>
-            <div className="text-center">
-              <p className="text-4xl md:text-5xl font-black">5K+</p>
-              <p className="font-mono text-sm mt-2">Miles Run</p>
+            <div className="text-center md:px-4">
+              <p className="text-5xl md:text-5xl lg:text-6xl font-black">5K+</p>
+              <p className="font-mono text-sm uppercase tracking-widest mt-2 opacity-90">Miles Run</p>
             </div>
           </div>
 
           {/* Contact Info */}
-          <div className="border-4 border-primary p-8 text-center">
+          <div className="border-4 border-primary p-6 md:p-8 text-center overflow-hidden">
             <h3 className="text-2xl font-black text-primary mb-2">GET IN TOUCH</h3>
-            <p className="text-lg font-mono text-gray-700">therunclubthane@gmail.com</p>
+            <p className="text-sm sm:text-base md:text-lg font-mono text-gray-700 break-all sm:break-normal">
+              therunclubthane@gmail.com
+            </p>
           </div>
         </div>
       </div>

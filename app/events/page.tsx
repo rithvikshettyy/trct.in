@@ -85,7 +85,7 @@ export default function EventsPage() {
         {/* Header */}
         <div className="max-w-7xl mx-auto">
           <div className="mb-16">
-            <h1 className="text-6xl md:text-7xl font-black text-primary mb-4 text-balance">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-black text-primary mb-4 text-balance">
               EVENT
               <br />
               CALENDAR

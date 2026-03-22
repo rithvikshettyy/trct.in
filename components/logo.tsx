@@ -5,7 +5,7 @@ const dancing = Dancing_Script({ subsets: ['latin'], weight: ['400'] })
 
 export function Logo({ className = "" }: { className?: string }) {
   return (
-    <div className={`relative flex flex-col items-center justify-center text-[#F2EFE8] ${className}`}>
+    <div className={`relative flex flex-col items-start justify-start text-[#F2EFE8] pl-10 ${className}`}>
       <div className="relative">
         <span
           className={`${dancing.className} absolute -top-5 -left-10 text-3xl z-10 -rotate-[15deg]`}
