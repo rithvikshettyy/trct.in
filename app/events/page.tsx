@@ -1,6 +1,6 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { Calendar, MapPin, Clock, Users } from "lucide-react"
+import { Calendar, MapPin, Clock, Users, Route } from "lucide-react"
 
 export default function EventsPage() {
   const upcomingEvents = [
@@ -58,6 +58,26 @@ export default function EventsPage() {
     return today > eventDate
   }
 
+  const allEvents = [...upcomingEvents]
+  const latestEvent = upcomingEvents[0]
+
+  if (latestEvent && isEventPast(latestEvent.date)) {
+    const nextDate = new Date(latestEvent.date)
+    nextDate.setDate(nextDate.getDate() + 7)
+
+    allEvents.unshift({
+      week: latestEvent.week + 1,
+      date: nextDate.toLocaleDateString("en-US", { month: "long", day: "2-digit", year: "numeric" }),
+      title: "UPCOMING",
+      time: "7:00 AM",
+      location: "TBD",
+      mapLink: "",
+      registrationLink: "",
+      distance: "TBD",
+      attendees: "TBD",
+    })
+  }
+
   return (
     <main className="min-h-screen bg-white">
       <Header />
@@ -78,7 +98,7 @@ export default function EventsPage() {
 
           {/* Events Grid */}
           <div className="grid md:grid-cols-2 gap-6 mb-16">
-            {upcomingEvents.map((event, idx) => (
+            {allEvents.map((event, idx) => (
               <div
                 key={idx}
                 className="border-4 border-primary p-8 hover:bg-primary hover:text-white transition-all duration-300 group cursor-pointer"
@@ -116,7 +136,7 @@ export default function EventsPage() {
                     )}
                   </div>
                   <div className="flex items-center gap-3">
-                    <Calendar className="w-5 h-5" />
+                    <Route className="w-5 h-5" />
                     <span className="font-mono">{event.distance}</span>
                   </div>
                   <div className="flex items-center gap-3">
@@ -128,7 +148,7 @@ export default function EventsPage() {
                 {isEventPast(event.date) ? (
                   <button
                     disabled
-                    className="mt-6 w-full font-black py-3 border-2 transition-all bg-gray-300 text-gray-600 border-gray-300 cursor-not-allowed group-hover:bg-primary group-hover:text-white group-hover:border-white opacity-50"
+                    className="mt-6 w-full font-black py-3 border transition-all bg-gray-300 text-gray-600 border-gray-400 cursor-not-allowed group-hover:bg-primary group-hover:text-white group-hover:border-white opacity-50"
                   >
                     REGISTRATIONS CLOSED
                   </button>
@@ -137,7 +157,7 @@ export default function EventsPage() {
                     href={event.registrationLink || "#"}
                     target={event.registrationLink ? "_blank" : undefined}
                     rel={event.registrationLink ? "noopener noreferrer" : undefined}
-                    className="mt-6 w-full font-black py-3 border-2 transition-all block text-center bg-white text-primary border-white hover:bg-opacity-90 group-hover:bg-primary group-hover:text-white group-hover:border-white"
+                    className="mt-6 w-full font-black py-3 border border-primary transition-all block text-center bg-white text-primary hover:bg-opacity-90 group-hover:bg-primary group-hover:text-white group-hover:border-white"
                   >
                     REGISTER NOW
                   </a>
