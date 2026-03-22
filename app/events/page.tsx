@@ -101,7 +101,7 @@ export default function EventsPage() {
             {allEvents.map((event, idx) => (
               <div
                 key={idx}
-                className="border-4 border-primary p-8 hover:bg-primary hover:text-white transition-all duration-300 group cursor-pointer"
+                className="border-4 border-primary p-8 hover:bg-primary hover:text-white transition-all duration-300 group cursor-pointer hover:-translate-y-2 hover:shadow-[8px_8px_0_0_#000]"
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex-1">
