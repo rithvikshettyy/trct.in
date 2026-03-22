@@ -64,16 +64,13 @@ export function Hero() {
 
         {/* Main heading with glitch effect */}
         <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-black leading-none mb-6 tracking-tighter uppercase text-[#F2EFE8]">
-          THE RUN
-          <br className="hidden sm:block" />
-          {" "}
-          <span className="inline-block hover:glitch transition-all">CLUB THANE</span>
+          <span className="inline-block hover:glitch transition-all">TRCT.IN</span>
         </h1>
 
         {/* Tagline */}
-        <div className="relative mb-12">
-          <p className="text-lg sm:text-xl md:text-3xl font-mono font-bold tracking-wider mb-2">NOT A CLUB —</p>
-          <p className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tight">A CULT.</p>
+        <div className="relative mb-12 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+          <span className="text-lg sm:text-xl md:text-3xl font-mono font-bold tracking-wider mt-1">NOT A CLUB —</span>
+          <span className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tight leading-none">A CULT.</span>
         </div>
 
         {/* CTA */}

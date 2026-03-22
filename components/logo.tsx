@@ -7,7 +7,7 @@ export function Logo({ className = "" }: { className?: string }) {
   return (
     <div className={`relative flex flex-col items-center justify-center text-[#F2EFE8] ${className}`}>
       <div className="relative">
-        <span 
+        <span
           className={`${dancing.className} absolute -top-5 -left-10 text-3xl z-10 -rotate-[15deg]`}
         >
           The
@@ -16,7 +16,7 @@ export function Logo({ className = "" }: { className?: string }) {
           <span className={`${playfair.className} text-6xl leading-none tracking-tight`}>
             Run
           </span>
-          <span 
+          <span
             className={`${dancing.className} text-3xl -ml-2 mb-2 z-10 -rotate-[10deg]`}
           >
             club
