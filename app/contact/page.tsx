@@ -227,20 +227,29 @@ export default function ContactPage() {
                   answer: "We typically respond within 48 hours. We're committed to building genuine partnerships, not just transactions."
                 }
               ].map((faq, index) => (
-                <div key={index} className="border-2 border-primary overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[4px_4px_0_0_#000]">
+                <div 
+                  key={index} 
+                  className="border-2 border-primary overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[4px_4px_0_0_#000] group/faq"
+                  onMouseEnter={() => {
+                    const element = document.getElementById(`faq-${index}`);
+                    if (element) {
+                      element.style.maxHeight = `${element.scrollHeight}px`;
+                      element.parentElement?.querySelector('.icon-plus')?.classList.add('rotate-45');
+                    }
+                  }}
+                  onMouseLeave={() => {
+                    const element = document.getElementById(`faq-${index}`);
+                    if (element) {
+                      element.style.maxHeight = '0px';
+                      element.parentElement?.querySelector('.icon-plus')?.classList.remove('rotate-45');
+                    }
+                  }}
+                >
                   <button
-                    onClick={() => {
-                      const element = document.getElementById(`faq-${index}`);
-                      if (element) {
-                        const isExpanded = element.style.maxHeight !== '0px';
-                        element.style.maxHeight = isExpanded ? '0px' : `${element.scrollHeight}px`;
-                        element.parentElement?.querySelector('.icon')?.classList.toggle('rotate-45', !isExpanded);
-                      }
-                    }}
                     className="w-full flex items-center justify-between p-4 text-left hover:bg-primary/5 transition-colors group"
                   >
                     <span className="font-black text-lg text-gray-900 group-hover:text-primary transition-colors">{faq.question}</span>
-                    <span className="icon font-black text-2xl text-primary transition-transform duration-300">+</span>
+                    <span className="icon-plus font-black text-2xl text-primary transition-transform duration-300">+</span>
                   </button>
                   <div
                     id={`faq-${index}`}
