@@ -39,7 +39,7 @@ export default function AboutPage() {
 
           {/* Story Section */}
           <div className="grid md:grid-cols-2 gap-12 mb-16">
-            <div className="border-4 border-primary p-8">
+            <div className="border-4 border-primary p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-[8px_8px_0_0_#000]">
               <h2 className="text-4xl font-black text-primary mb-4">THE STORY</h2>
               <p className="font-mono text-gray-700 mb-4">
                 In 2024, two teenagers with a passion for running decided to create something different. No corporate
@@ -95,7 +95,7 @@ export default function AboutPage() {
               {founders.map((founder) => (
                 <div
                   key={founder.name}
-                  className="border-4 border-primary p-8 hover:bg-primary hover:text-white transition-all duration-300 group"
+                  className="border-4 border-primary p-8 hover:bg-primary hover:text-white transition-all duration-300 group hover:-translate-y-2 hover:shadow-[8px_8px_0_0_#000]"
                 >
                   <div className="mb-4">
                     <p className="text-sm font-mono font-bold opacity-70 group-hover:opacity-100">
@@ -132,7 +132,7 @@ export default function AboutPage() {
           </div>
 
           {/* Contact Info */}
-          <div className="border-4 border-primary p-6 md:p-8 text-center overflow-hidden">
+          <div className="border-4 border-primary p-6 md:p-8 text-center overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-[8px_8px_0_0_#000]">
             <h3 className="text-2xl font-black text-primary mb-2">GET IN TOUCH</h3>
             <p className="text-sm sm:text-base md:text-lg font-mono text-gray-700 break-all sm:break-normal">
               therunclubthane@gmail.com

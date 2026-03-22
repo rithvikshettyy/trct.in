@@ -210,30 +210,49 @@ export default function ContactPage() {
           </div>
 
           {/* FAQ Section */}
-          <div className="bg-white border-4 border-primary p-12">
+          <div className="bg-white border-4 border-primary p-8 md:p-12 mb-16">
             <h2 className="text-4xl font-black text-primary mb-8">FREQUENTLY ASKED</h2>
-            <div className="space-y-6">
-              <div>
-                <h3 className="font-black text-lg text-gray-900 mb-2">How can we sponsor The Run Club Thane?</h3>
-                <p className="font-mono text-gray-700">
-                  We work with brands that align with our cult values. Reach out via the form above with your
-                  sponsorship proposal, and we'll discuss partnership opportunities.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-black text-lg text-gray-900 mb-2">What are collaboration opportunities?</h3>
-                <p className="font-mono text-gray-700">
-                  From content creation to event hosting, from product launches to community initiatives—if it fits our
-                  vibe, let's make it happen.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-black text-lg text-gray-900 mb-2">How quickly will you respond?</h3>
-                <p className="font-mono text-gray-700">
-                  We typically respond within 48 hours. We're committed to building genuine partnerships, not just
-                  transactions.
-                </p>
-              </div>
+            <div className="space-y-4">
+              {[
+                {
+                  question: "How can we sponsor The Run Club Thane?",
+                  answer: "We work with brands that align with our cult values. Reach out via the form above with your sponsorship proposal, and we'll discuss partnership opportunities."
+                },
+                {
+                  question: "What are collaboration opportunities?",
+                  answer: "From content creation to event hosting, from product launches to community initiatives—if it fits our vibe, let's make it happen."
+                },
+                {
+                  question: "How quickly will you respond?",
+                  answer: "We typically respond within 48 hours. We're committed to building genuine partnerships, not just transactions."
+                }
+              ].map((faq, index) => (
+                <div key={index} className="border-2 border-primary overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[4px_4px_0_0_#000]">
+                  <button
+                    onClick={() => {
+                      const element = document.getElementById(`faq-${index}`);
+                      if (element) {
+                        const isExpanded = element.style.maxHeight !== '0px';
+                        element.style.maxHeight = isExpanded ? '0px' : `${element.scrollHeight}px`;
+                        element.parentElement?.querySelector('.icon')?.classList.toggle('rotate-45', !isExpanded);
+                      }
+                    }}
+                    className="w-full flex items-center justify-between p-4 text-left hover:bg-primary/5 transition-colors group"
+                  >
+                    <span className="font-black text-lg text-gray-900 group-hover:text-primary transition-colors">{faq.question}</span>
+                    <span className="icon font-black text-2xl text-primary transition-transform duration-300">+</span>
+                  </button>
+                  <div
+                    id={`faq-${index}`}
+                    style={{ maxHeight: '0px' }}
+                    className="overflow-hidden transition-all duration-300 ease-in-out bg-primary/5"
+                  >
+                    <div className="p-4 pt-0 font-mono text-gray-700 border-t border-primary/10">
+                      {faq.answer}
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
