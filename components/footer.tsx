@@ -48,8 +48,8 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t-2 border-primary/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm font-mono">© 2025 THE RUN CLUB THANE. ALL RIGHTS RESERVED.</p>
-          <p className="text-sm opacity-70">BUILT WITH ❤️ AND PURE ENERGY</p>
+          <p className="text-sm font-mono">© 2026 THE RUN CLUB THANE. ALL RIGHTS RESERVED.</p>
+          <p className="text-sm opacity-70">BUILT WITH PURE ENERGY</p>
         </div>
 
         {/* Large watermark */}

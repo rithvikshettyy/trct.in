@@ -5,12 +5,22 @@ import { Calendar, MapPin, Clock, Users } from "lucide-react"
 export default function EventsPage() {
   const upcomingEvents = [
     {
-      date: "Nov 25, 2025",
-      title: "Sunday Sunrise Run",
+      date: "April 14, 2026",
+      title: "Speed Work Session",
+      time: "6:00 AM",
+      location: "Thane Sports Complex",
+      distance: "8K",
+      attendees: "100+",
+      isPast: false,
+    },
+    {
+      date: "April 21, 2026",
+      title: "Community Long Run",
       time: "6:00 AM",
       location: "Thane Waterfront Park",
-      distance: "5K - 10K",
-      attendees: "120+",
+      distance: "12K+",
+      attendees: "200+",
+      isPast: false,
     },
     {
       date: "Dec 02, 2025",
@@ -19,22 +29,16 @@ export default function EventsPage() {
       location: "Thane Lake Circuit",
       distance: "10K",
       attendees: "150+",
+      isPast: true,
     },
     {
-      date: "Dec 09, 2025",
-      title: "Speed Work Session",
-      time: "6:00 AM",
-      location: "Thane Sports Complex",
-      distance: "8K",
-      attendees: "100+",
-    },
-    {
-      date: "Dec 16, 2025",
-      title: "Community Long Run",
+      date: "Nov 25, 2025",
+      title: "Sunday Sunrise Run",
       time: "6:00 AM",
       location: "Thane Waterfront Park",
-      distance: "12K+",
-      attendees: "200+",
+      distance: "5K - 10K",
+      attendees: "120+",
+      isPast: true,
     },
   ]
 
@@ -89,8 +93,15 @@ export default function EventsPage() {
                   </div>
                 </div>
 
-                <button className="mt-6 w-full bg-white text-primary font-black py-3 border-2 border-white hover:bg-opacity-90 transition-all group-hover:bg-primary group-hover:text-white group-hover:border-white">
-                  REGISTER NOW
+                <button 
+                  disabled={event.isPast}
+                  className={`mt-6 w-full font-black py-3 border-2 transition-all ${
+                    event.isPast 
+                      ? "bg-gray-300 text-gray-600 border-gray-300 cursor-not-allowed group-hover:bg-primary group-hover:text-white group-hover:border-white opacity-50"
+                      : "bg-white text-primary border-white hover:bg-opacity-90 group-hover:bg-primary group-hover:text-white group-hover:border-white"
+                  }`}
+                >
+                  {event.isPast ? "REGISTRATIONS CLOSED" : "REGISTER NOW"}
                 </button>
               </div>
             ))}
