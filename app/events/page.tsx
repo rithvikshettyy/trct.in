@@ -5,42 +5,58 @@ import { Calendar, MapPin, Clock, Users } from "lucide-react"
 export default function EventsPage() {
   const upcomingEvents = [
     {
-      date: "April 14, 2026",
-      title: "Speed Work Session",
-      time: "6:00 AM",
-      location: "Thane Sports Complex",
-      distance: "8K",
+      week: 39,
+      date: "March 22, 2026",
+      title: "Oxygen Rave Party",
+      time: "7:00 AM",
+      location: "House Of Pickle, Cadbury Junction, Thane",
+      mapLink: "https://share.google/SUsZ4iOpth17oKvju",
+      registrationLink: "https://go.playo.app/PLAYOO/HLq1Y",
+      distance: "3K, 5K, 10K",
       attendees: "100+",
-      isPast: false,
     },
     {
-      date: "April 21, 2026",
-      title: "Community Long Run",
-      time: "6:00 AM",
-      location: "Thane Waterfront Park",
-      distance: "12K+",
+      week: 37,
+      date: "March 08, 2026",
+      title: "Sunday Running",
+      time: "7:00 AM",
+      location: "Joggers Park, Hiranandani Estate, Thane",
+      mapLink: "https://share.google/KDZJWXXfo0ylPv01p",
+      registrationLink: "",
+      distance: "3K, 5K, 10K",
       attendees: "200+",
-      isPast: false,
     },
     {
-      date: "Dec 02, 2025",
-      title: "High Energy Group Run",
-      time: "6:00 AM",
-      location: "Thane Lake Circuit",
-      distance: "10K",
+      week: 36,
+      date: "February 01, 2026",
+      title: "Sunday Morning Run",
+      time: "7:00 AM",
+      location: "Flour N Fiene, Hiranandani Meadows",
+      mapLink: "https://share.google/ilVdJhobelC9Op19N",
+      registrationLink: "",
+      distance: "3K, 5K, 10K",
       attendees: "150+",
-      isPast: true,
     },
     {
-      date: "Nov 25, 2025",
-      title: "Sunday Sunrise Run",
-      time: "6:00 AM",
-      location: "Thane Waterfront Park",
-      distance: "5K - 10K",
+      week: 35,
+      date: "February 22, 2026",
+      title: "Electro - Rush",
+      time: "7:00 AM",
+      location: "Hiranandani Heritage Garden, Thane",
+      mapLink: "https://share.google/t5Iy66nll6TUDYakr",
+      registrationLink: "",
+      distance: "3K, 5K, 10K",
       attendees: "120+",
-      isPast: true,
     },
   ]
+
+  const isEventPast = (dateStr: string) => {
+    const eventDate = new Date(dateStr)
+    eventDate.setHours(0, 0, 0, 0)
+    const today = new Date()
+    today.setHours(0, 0, 0, 0)
+    return today > eventDate
+  }
 
   return (
     <main className="min-h-screen bg-white">
@@ -56,7 +72,7 @@ export default function EventsPage() {
             </h1>
             <div className="w-12 h-3 bg-primary mb-6"></div>
             <p className="font-mono text-lg text-gray-700">
-              Every Sunday at 6:00 AM. Join the movement. Feel the energy.
+              Every Sunday at 7:00 AM. Join the movement. Feel the energy.
             </p>
           </div>
 
@@ -69,7 +85,12 @@ export default function EventsPage() {
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex-1">
-                    <p className="font-mono text-sm font-bold opacity-75 group-hover:opacity-100">{event.date}</p>
+                    <div className="flex items-center gap-3">
+                      <p className="font-mono text-sm font-bold opacity-75 group-hover:opacity-100">{event.date}</p>
+                      <span className="bg-primary text-white text-[10px] px-2 py-0.5 font-mono font-black group-hover:bg-white group-hover:text-primary transition-colors">
+                        WEEK {event.week}
+                      </span>
+                    </div>
                     <h3 className="text-2xl md:text-3xl font-black mt-2 text-balance">{event.title}</h3>
                   </div>
                 </div>
@@ -81,7 +102,18 @@ export default function EventsPage() {
                   </div>
                   <div className="flex items-center gap-3">
                     <MapPin className="w-5 h-5" />
-                    <span className="font-mono">{event.location}</span>
+                    {event.mapLink ? (
+                      <a
+                        href={event.mapLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-mono hover:underline decoration-2 underline-offset-4"
+                      >
+                        {event.location}
+                      </a>
+                    ) : (
+                      <span className="font-mono">{event.location}</span>
+                    )}
                   </div>
                   <div className="flex items-center gap-3">
                     <Calendar className="w-5 h-5" />
@@ -93,16 +125,23 @@ export default function EventsPage() {
                   </div>
                 </div>
 
-                <button 
-                  disabled={event.isPast}
-                  className={`mt-6 w-full font-black py-3 border-2 transition-all ${
-                    event.isPast 
-                      ? "bg-gray-300 text-gray-600 border-gray-300 cursor-not-allowed group-hover:bg-primary group-hover:text-white group-hover:border-white opacity-50"
-                      : "bg-white text-primary border-white hover:bg-opacity-90 group-hover:bg-primary group-hover:text-white group-hover:border-white"
-                  }`}
-                >
-                  {event.isPast ? "REGISTRATIONS CLOSED" : "REGISTER NOW"}
-                </button>
+                {isEventPast(event.date) ? (
+                  <button
+                    disabled
+                    className="mt-6 w-full font-black py-3 border-2 transition-all bg-gray-300 text-gray-600 border-gray-300 cursor-not-allowed group-hover:bg-primary group-hover:text-white group-hover:border-white opacity-50"
+                  >
+                    REGISTRATIONS CLOSED
+                  </button>
+                ) : (
+                  <a
+                    href={event.registrationLink || "#"}
+                    target={event.registrationLink ? "_blank" : undefined}
+                    rel={event.registrationLink ? "noopener noreferrer" : undefined}
+                    className="mt-6 w-full font-black py-3 border-2 transition-all block text-center bg-white text-primary border-white hover:bg-opacity-90 group-hover:bg-primary group-hover:text-white group-hover:border-white"
+                  >
+                    REGISTER NOW
+                  </a>
+                )}
               </div>
             ))}
           </div>

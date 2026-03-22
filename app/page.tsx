@@ -13,7 +13,7 @@ export default function Home() {
     <main className="min-h-screen">
       <Header />
       <Hero />
-      <Marquee text="EVERY SUNDAY · 6AM · THANE" />
+      <Marquee text="EVERY SUNDAY · 7AM · THANE" />
       <EventsSection />
       <Marquee text="RUN WITH US · JOIN THE MOVEMENT · FEEL THE ENERGY" direction="reverse" />
       <CultSection />

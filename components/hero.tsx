@@ -89,14 +89,14 @@ export function Hero() {
             variant="outline"
             className="w-full sm:w-auto text-base sm:text-lg px-6 lg:px-8 py-6 sm:py-6 font-bold border-2 border-white text-white hover:bg-white hover:text-primary transition-all duration-300 bg-transparent hover:-translate-y-1 hover:shadow-[4px_4px_0_0_#fff]"
           >
-            NEXT RUN: SUNDAY 6AM
+            NEXT RUN: SUNDAY 7AM
           </Button>
         </div>
 
         {/* Stats */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 mt-16 sm:mt-20 mb-20 sm:mb-32 max-w-3xl mx-auto w-full px-2 sm:px-0">
           {[
-            { number: "800+", label: "CULT MEMBERS" },
+            { number: "2000+", label: "CULT MEMBERS" },
             { number: "40+", label: "EVENTS RUN" },
             { number: "100%", label: "PURE ENERGY" },
           ].map((stat, i) => (

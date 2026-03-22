@@ -63,7 +63,7 @@ export function JoinSection() {
 
         {/* Final push */}
         <div className="mt-12">
-          <p className="text-2xl md:text-4xl font-black">SEE YOU THIS SUNDAY. 6AM. DON'T BE LATE.</p>
+          <p className="text-2xl md:text-4xl font-black">SEE YOU THIS SUNDAY. 7AM. DON'T BE LATE.</p>
         </div>
       </div>
     </section>

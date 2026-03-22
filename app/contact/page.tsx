@@ -78,7 +78,7 @@ export default function ContactPage() {
                     <p className="font-black text-gray-900">LOCATION</p>
                   </div>
                   <p className="font-mono text-gray-700">Thane, Maharashtra, India</p>
-                  <p className="font-mono text-sm text-gray-600 mt-1">Every Sunday, 6:00 AM</p>
+                  <p className="font-mono text-sm text-gray-600 mt-1">Every Sunday, 7:00 AM</p>
                 </div>
 
                 <div className="border-l-4 border-primary pl-6">

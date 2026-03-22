@@ -42,7 +42,7 @@ export function Footer() {
             <h4 className="font-mono font-bold mb-4 text-sm">GET IN TOUCH</h4>
             <p className="text-sm mb-3 hover:translate-x-2 transition-transform duration-300 cursor-default">📧 hello@therunclubthane.com</p>
             <p className="text-sm mb-3 hover:translate-x-2 transition-transform duration-300 cursor-default">📍 Thane, Maharashtra</p>
-            <p className="text-sm hover:translate-x-2 transition-transform duration-300 cursor-default">⏰ Every Sunday, 6:00 AM</p>
+            <p className="text-sm hover:translate-x-2 transition-transform duration-300 cursor-default">⏰ Every Sunday, 7:00 AM</p>
           </div>
         </div>
 

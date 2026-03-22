@@ -26,7 +26,7 @@ export function EventsSection() {
             {
               icon: Clock,
               title: "TIME",
-              detail: "6:00 AM Sharp",
+              detail: "7:00 AM Sharp",
               subdetail: "Early birds get the endorphins",
             },
             {

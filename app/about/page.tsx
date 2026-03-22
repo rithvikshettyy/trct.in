@@ -50,7 +50,7 @@ export default function AboutPage() {
                 who believe in community, consistency, and cult energy.
               </p>
               <p className="font-mono text-gray-700">
-                Every Sunday at 6 AM, we gather. Not because we have to. Because we WANT to. Because we believe that
+                Every Sunday at 7 AM, we gather. Not because we have to. Because we WANT to. Because we believe that
                 running together is more powerful than running alone.
               </p>
             </div>

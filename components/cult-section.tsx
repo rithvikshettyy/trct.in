@@ -69,7 +69,7 @@ export function CultSection() {
         <div className="grid md:grid-cols-3 gap-6">
           {[
             {
-              quote: "I've never felt more alive at 6 AM. This run club changed my life fr.",
+              quote: "I've never felt more alive at 7 AM. This run club changed my life fr.",
               name: "SHUBHAM PATIL, 22",
             },
             {
