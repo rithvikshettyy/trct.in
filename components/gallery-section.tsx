@@ -7,9 +7,9 @@ export function GallerySection() {
     { week: 39, date: "Recent Run", link: "#", thumbnail: "/img1.jpeg" },
     { week: 38, date: "Previous Run", link: "#", thumbnail: "/img2.jpeg" },
     { week: 37, date: "Past Run", link: "https://drive.google.com/drive/folders/1SYAD7filRbC0l1y6c0E6B308ndi4iLNf", thumbnail: "/img1.jpeg" },
-    { week: 36, date: "Past Run", link: "#", thumbnail: "/img4.jpeg" },
-    { week: 35, date: "Past Run", link: "#", thumbnail: "/img5.jpeg" },
-    { week: 34, date: "Past Run", link: "#", thumbnail: "/img6.jpeg" },
+    { week: 36, date: "Past Run", link: "#", thumbnail: "/img1.jpeg" },
+    { week: 35, date: "Past Run", link: "#", thumbnail: "/img2.jpeg" },
+    { week: 34, date: "Past Run", link: "#", thumbnail: "/img1.jpeg" },
   ]
 
   return (
