@@ -1,9 +1,22 @@
 import { Flame, Zap, Heart, Target } from "lucide-react"
+import Image from "next/image"
 
 export function CultSection() {
   return (
-    <section className="py-20 md:py-32 px-4 bg-secondary text-secondary-foreground">
-      <div className="max-w-7xl mx-auto">
+    <section className="relative py-20 md:py-32 px-4 bg-secondary text-secondary-foreground overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/img1.jpeg"
+          alt="Cult Section Background"
+          fill
+          className="object-cover opacity-[15%]"
+          sizes="100vw"
+          quality={90}
+        />
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16 md:mb-20 px-2 sm:px-0">
           <h2 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-black mb-4 md:mb-6 text-balance">

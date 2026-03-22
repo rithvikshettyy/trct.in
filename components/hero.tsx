@@ -96,7 +96,7 @@ export function Hero() {
         {/* Stats */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 mt-16 sm:mt-20 mb-20 sm:mb-32 max-w-3xl mx-auto w-full px-2 sm:px-0">
           {[
-            { number: "500+", label: "CULT MEMBERS" },
+            { number: "800+", label: "CULT MEMBERS" },
             { number: "40+", label: "EVENTS RUN" },
             { number: "100%", label: "PURE ENERGY" },
           ].map((stat, i) => (
