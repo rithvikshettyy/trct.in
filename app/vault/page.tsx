@@ -2,15 +2,16 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { ArrowLeft, ArrowRight, ImageIcon } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 export default function VaultPage() {
   const allWeeks = [
     { week: 39, date: "Recent Run", link: "#", thumbnail: "/img1.jpeg" },
     { week: 38, date: "Previous Run", link: "#", thumbnail: "/img2.jpeg" },
     { week: 37, date: "Past Run", link: "https://drive.google.com/drive/folders/1SYAD7filRbC0l1y6c0E6B308ndi4iLNf", thumbnail: "/img1.jpeg" },
-    { week: 36, date: "Past Run", link: "#", thumbnail: "/img4.jpeg" },
-    { week: 35, date: "Past Run", link: "#", thumbnail: "/img5.jpeg" },
-    { week: 34, date: "Past Run", link: "#", thumbnail: "/img6.jpeg" },
+    { week: 36, date: "Past Run", link: "#", thumbnail: "/img2.jpeg" },
+    { week: 35, date: "Past Run", link: "#", thumbnail: "/img1.jpeg" },
+    { week: 34, date: "Past Run", link: "#", thumbnail: "/img2.jpeg" },
     { week: 33, date: "Past Run", link: "#", thumbnail: "" },
     { week: 32, date: "Past Run", link: "#", thumbnail: "" },
     { week: 31, date: "Past Run", link: "#", thumbnail: "" },
@@ -77,7 +78,13 @@ export default function VaultPage() {
             >
               <div className="aspect-[4/3] w-full bg-foreground/10 flex items-center justify-center relative overflow-hidden border-b-4 border-foreground group-hover:border-primary/50 transition-colors duration-300">
                 {item.thumbnail ? (
-                  <img src={item.thumbnail} alt={`Week ${item.week}`} className="absolute w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <Image
+                    src={item.thumbnail}
+                    alt={`Week ${item.week}`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
                 ) : (
                   <ImageIcon className="w-12 h-12 opacity-20 group-hover:scale-110 group-hover:-rotate-6 transition-transform duration-500" />
                 )}

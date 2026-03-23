@@ -4,7 +4,12 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    unoptimized: true,
+    qualities: [75, 90],
+  },
+  experimental: {
+    turbopack: {
+      root: '.',
+    },
   },
 }
 

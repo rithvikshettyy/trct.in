@@ -169,18 +169,22 @@ export default function EventsPage() {
           {/* Info Box */}
           <div className="bg-primary text-white p-8 border-4 border-white">
             <h2 className="text-2xl font-black mb-2">WHAT TO EXPECT</h2>
-            <div className="grid md:grid-cols-3 gap-6 mt-6 font-mono">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-6 font-mono text-white/90">
               <div>
-                <p className="font-black text-lg mb-2">VIBE</p>
+                <p className="font-black text-lg mb-2 text-white uppercase tracking-tighter">VIBE</p>
                 <p>High energy, supportive community running experience</p>
               </div>
               <div>
-                <p className="font-black text-lg mb-2">PACE</p>
+                <p className="font-black text-lg mb-2 text-white uppercase tracking-tighter">PACE</p>
                 <p>All fitness levels welcome - we have multiple pace groups</p>
               </div>
               <div>
-                <p className="font-black text-lg mb-2">AFTER RUN</p>
+                <p className="font-black text-lg mb-2 text-white uppercase tracking-tighter">AFTER RUN</p>
                 <p>Community hangout, energy drinks, and networking</p>
+              </div>
+              <div>
+                <p className="font-black text-lg mb-2 text-white uppercase tracking-tighter">PARTNERSHIPS</p>
+                <p>TRCT partners with major marathons giving you exciting offers and much more!</p>
               </div>
             </div>
           </div>

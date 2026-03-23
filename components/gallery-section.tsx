@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { ArrowRight, ImageIcon } from "lucide-react"
 import Link from "next/link"
 
@@ -48,7 +49,13 @@ export function GallerySection() {
               {/* Thumbnail Area */}
               <div className="aspect-[4/3] w-full bg-foreground/10 flex items-center justify-center relative overflow-hidden border-b-4 border-foreground group-hover:border-primary/50 transition-colors duration-300">
                 {item.thumbnail ? (
-                  <img src={item.thumbnail} alt={`Week ${item.week}`} className="absolute w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <Image
+                    src={item.thumbnail}
+                    alt={`Week ${item.week}`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
                 ) : (
                   <ImageIcon className="w-12 h-12 opacity-20 group-hover:scale-110 group-hover:-rotate-6 transition-transform duration-500" />
                 )}

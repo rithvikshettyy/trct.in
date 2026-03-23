@@ -52,14 +52,14 @@ function AnimatedNumber({ value }: { value: string }) {
 
 export function Hero() {
   return (
-    <section className="relative min-h-[100dvh] flex flex-col items-center justify-center bg-primary text-primary-foreground overflow-hidden px-4 pt-32 md:pt-40 pb-20">
+    <section className="relative min-h-[100dvh] flex flex-col items-center justify-center bg-primary text-primary-foreground overflow-hidden px-4 pt-38 md:pt-40 pb-20">
       {/* Background grid pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff10_1px,transparent_1px),linear-gradient(to_bottom,#ffffff10_1px,transparent_1px)] bg-[size:4rem_4rem]" />
 
       <div className="relative z-10 max-w-7xl mx-auto text-center">
         {/* Location badge */}
-        <div className="inline-block mb-8 px-6 py-2 border-2 border-white">
-          <span className="font-mono text-xs sm:text-sm md:text-base tracking-widest font-black">THANE'S BIGGEST RUNNING COMMUNITY</span>
+        <div className="inline-block mb-8 px-4 sm:px-6 py-2 border-2 border-white max-w-[95vw]">
+          <span className="font-mono text-[10px] sm:text-sm md:text-base tracking-widest font-black">THANE'S BIGGEST RUNNING COMMUNITY</span>
         </div>
 
         {/* Main heading with glitch effect */}

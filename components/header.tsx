@@ -14,8 +14,8 @@ export function Header() {
       <nav className="w-full px-4 md:px-8 lg:px-12 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
-          <div className="relative w-[180px] h-[60px] md:w-[220px] md:h-[70px]">
-            <Logo className="absolute left-0 top-1/2 -translate-y-1/2 scale-[0.45] md:scale-[0.55] origin-left" />
+          <div className="relative w-[230px] h-[90px] md:w-[280px] md:h-[75px]">
+            <Logo className="absolute left-0 top-1/2 -translate-y-1/2 mt-2 scale-[0.7] md:scale-[0.75] origin-left" />
           </div>
         </Link>
 
@@ -59,10 +59,9 @@ export function Header() {
       </nav>
 
       {/* Mobile Menu */}
-      <div 
-        className={`md:hidden absolute top-full left-0 right-0 bg-primary border-t-2 border-white transition-all duration-300 ease-in-out overflow-hidden ${
-          mobileMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0 pointer-events-none"
-        }`}
+      <div
+        className={`md:hidden absolute top-full left-0 right-0 bg-primary border-t-2 border-white transition-all duration-300 ease-in-out overflow-hidden ${mobileMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0 pointer-events-none"
+          }`}
       >
         <div className="px-6 py-8 space-y-6">
           <Link

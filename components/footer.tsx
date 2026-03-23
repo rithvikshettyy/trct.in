@@ -7,8 +7,8 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <div className="mb-5">
-              <Logo className="scale-[0.65] origin-left" />
+            <div className="mb-[-55px]">
+              <Logo className="scale-[1.2] origin-left -ml-14" />
             </div>
             <p className="text-sm opacity-70 leading-relaxed">
               Not a club. A cult.
