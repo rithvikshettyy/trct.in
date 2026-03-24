@@ -5,6 +5,17 @@ import { Calendar, MapPin, Clock, Users, Route } from "lucide-react"
 export default function EventsPage() {
   const upcomingEvents = [
     {
+      week: 40,
+      date: "March 29, 2026",
+      title: "Trail Run Festival",
+      time: "7:00 AM",
+      location: "Upvan Lake, Thane",
+      mapLink: "https://share.google/AIQeAkADEf2pKZZTm",
+      registrationLink: "https://go.playo.app/PLAYOO/-7NEX",
+      distance: "5K",
+      attendees: "100+",
+    },
+    {
       week: 39,
       date: "March 22, 2026",
       title: "Oxygen Rave Party",
