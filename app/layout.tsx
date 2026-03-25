@@ -122,6 +122,7 @@ export const viewport: Viewport = {
   userScalable: false,
 }
 
+
 export default function RootLayout({
   children,
 }: Readonly<{

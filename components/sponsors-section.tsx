@@ -1,12 +1,27 @@
 import Link from "next/link"
 
 export function SponsorsSection() {
-  const sponsorLogos = [
-    { name: "WROGN", filename: "wrogn.png", width: "w-20 md:w-24 lg:w-28", link: "https://wrogn.in" },
-    { name: "PLAYO", filename: "playo.png", width: "w-40 md:w-56 lg:w-64", link: "https://playo.co" },
-    { name: "PROVILAC", filename: "provilac.png", width: "w-36 md:w-48 lg:w-56", link: "https://provilac.com" },
-    { name: "RED BULL", filename: "redbull.png", width: "w-24 md:w-32 lg:w-36", link: "https://www.redbull.com" },
-    { name: "INHALE", filename: "inhale.png", width: "w-28 md:w-36 lg:w-40", link: "https://inhaleindia.in/" },
+  const sponsors = [
+    { name: "WROGN", link: "https://wrogn.in" },
+    { name: "PLAYO", link: "https://playo.co" },
+    { name: "PROVILAC DAIRY", link: "https://provilac.com" },
+    { name: "RED BULL", link: "https://www.redbull.com" },
+    { name: "INHALE", link: "https://inhaleindia.in/" },
+    { name: "FAST & UP", link: "https://www.fastandup.in" },
+    { name: "NEUROGUM", link: "#" },
+    { name: "DECATHLON", link: "#" },
+    { name: "SKYWAY", link: "#" },
+    { name: "BREWY", link: "#" },
+    { name: "INFINITO WEAR", link: "#" },
+    { name: "EVORAH", link: "#" },
+    { name: "EVOCUS (HYDRATION IV)", link: "#" },
+    { name: "MISFITS", link: "#" },
+    { name: "CRUNCH", link: "#" },
+    { name: "THREE MORE REPS", link: "#" },
+    { name: "AIR GABS", link: "#" },
+    { name: "CHICNUTRIX", link: "#" },
+    { name: "11:11 ELVN ELVN", link: "#" },
+    { name: "BREATHEE", link: "#" },
   ]
 
   return (
@@ -19,22 +34,24 @@ export function SponsorsSection() {
         </h2>
         <div className="w-12 h-2 bg-primary mb-12"></div>
 
-        <div className="relative overflow-hidden my-16 py-10 border-y-4 border-primary bg-secondary/5">
+        <div className="relative overflow-hidden my-16 py-12 border-y-4 border-primary bg-secondary/5 mb-8">
           {/* Overlay gradients for smooth fade effect at edges */}
-          <div className="absolute top-0 bottom-0 left-0 w-24 bg-gradient-to-r from-white to-transparent z-10" />
-          <div className="absolute top-0 bottom-0 right-0 w-24 bg-gradient-to-l from-white to-transparent z-10" />
+          <div className="absolute top-0 bottom-0 left-0 w-32 bg-gradient-to-r from-white to-transparent z-10" />
+          <div className="absolute top-0 bottom-0 right-0 w-32 bg-gradient-to-l from-white to-transparent z-10" />
 
-          <div className="flex animate-marquee gap-24 min-w-max px-12 items-center">
-            {/* Array repeated multiple times to ensure the loop never runs out of content on ultra-wide screens */}
-            {[...sponsorLogos, ...sponsorLogos, ...sponsorLogos, ...sponsorLogos].map((logo, index) => (
-              <div key={index} className="flex justify-center items-center w-32 md:w-40 lg:w-48 h-16 md:h-20 lg:h-24 shrink-0">
-                <a href={logo.link} target={logo.link === "#" ? "_self" : "_blank"} rel="noopener noreferrer" className="flex items-center justify-center">
-                  <img
-                    src={`/sponsors/${logo.filename}`}
-                    alt={`${logo.name} Logo`}
-                    className={`${logo.width} max-w-none object-contain mix-blend-multiply transition-all duration-500 hover:scale-110 hover:-translate-y-1 cursor-pointer`}
-                  />
+          <div className="flex animate-marquee gap-16 min-w-max px-12 items-center">
+            {/* Array repeated multiple times for seamless loop */}
+            {[...sponsors, ...sponsors, ...sponsors, ...sponsors].map((logo, index) => (
+              <div key={index} className="flex items-center gap-16 shrink-0">
+                <a 
+                  href={logo.link} 
+                  target={logo.link === "#" ? "_self" : "_blank"} 
+                  rel="noopener noreferrer" 
+                  className="text-3xl md:text-4xl lg:text-5xl font-black text-secondary hover:text-primary transition-colors duration-300 uppercase tracking-tighter whitespace-nowrap"
+                >
+                  {logo.name}
                 </a>
+                <span className="text-2xl md:text-3xl lg:text-4xl font-black text-primary italic select-none">/</span>
               </div>
             ))}
           </div>
