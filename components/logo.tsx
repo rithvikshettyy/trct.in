@@ -6,9 +6,6 @@ import { motion } from "framer-motion"
 export function Logo({ className = "" }: { className?: string }) {
   return (
     <motion.div
-      whileHover={{ scale: 1.1, rotate: 2 }}
-      whileTap={{ scale: 0.95, rotate: -2 }}
-      transition={{ type: "spring", stiffness: 400, damping: 15 }}
       className={`inline-block ${className}`}
     >
       <Image
