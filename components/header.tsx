@@ -34,7 +34,7 @@ export function Header() {
             <span className="absolute bottom-0 left-0 w-full h-[2px] bg-white origin-left scale-x-0 transition-transform duration-300 ease-out group-hover:scale-x-100" />
           </Link>
           <a
-            href="https://chat.whatsapp.com/GlZwMFVjvU2EZ9kNnVzuCI?mode=wwt&utm_source=igios&utm_campaign=wa_communities_url_xma&source_surface=25&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcXBfaWQPNTY3MDY3MzQzMzUyNDI3AAGnmBoH1VPrrkVMSq2Mr6IMIJ3JmvXw0UHk1d9iQwaHYg-jDDhGgEQaWU0sXDc_aem_Wbsg3hXzAeD68ZUcS7DiyA"
+            href="https://chat.whatsapp.com/E1WKR6AZV6wIDAZJOqO6Kk"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -86,7 +86,7 @@ export function Header() {
             COLLAB
           </Link>
           <a
-            href="https://chat.whatsapp.com/GlZwMFVjvU2EZ9kNnVzuCI?mode=wwt&utm_source=igios&utm_campaign=wa_communities_url_xma&source_surface=25&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcXBfaWQPNTY3MDY3MzQzMzUyNDI3AAGnmBoH1VPrrkVMSq2Mr6IMIJ3JmvXw0UHk1d9iQwaHYg-jDDhGgEQaWU0sXDc_aem_Wbsg3hXzAeD68ZUcS7DiyA"
+            href="https://chat.whatsapp.com/E1WKR6AZV6wIDAZJOqO6Kk"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setMobileMenuOpen(false)}

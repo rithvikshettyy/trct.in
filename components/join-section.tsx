@@ -22,14 +22,16 @@ export function JoinSection() {
 
         {/* Action buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 w-full max-w-2xl mx-auto">
-          <Button
-            size="lg"
-            variant="secondary"
-            className="w-full sm:w-auto text-base sm:text-lg px-6 lg:px-8 py-6 font-bold hover:-translate-y-1 hover:shadow-[4px_4px_0_0_#fff] transition-all duration-300 bg-white text-primary border-2 border-white hover:bg-white/90 group"
-          >
-            <MessageCircle className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
-            JOIN WHATSAPP GROUP
-          </Button>
+          <a href="https://chat.whatsapp.com/E1WKR6AZV6wIDAZJOqO6Kk" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+            <Button
+              size="lg"
+              variant="secondary"
+              className="w-full sm:w-auto text-base sm:text-lg px-6 lg:px-8 py-6 font-bold hover:-translate-y-1 hover:shadow-[4px_4px_0_0_#fff] transition-all duration-300 bg-white text-primary border-2 border-white hover:bg-white/90 group"
+            >
+              <MessageCircle className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
+              JOIN WHATSAPP GROUP
+            </Button>
+          </a>
 
           <Button
             size="lg"

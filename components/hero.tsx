@@ -9,7 +9,7 @@ import { MotionBackground, KineticTitle } from "./motion-graphics"
 function AnimatedNumber({ value }: { value: string }) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.5 })
-  
+
   const match = value.match(/^(\D*)(\d+)(.*)$/)
   const prefix = match ? match[1] : ""
   const targetNumber = match ? parseInt(match[2], 10) : parseInt(value, 10) || 0
@@ -21,7 +21,7 @@ function AnimatedNumber({ value }: { value: string }) {
     damping: 20,
   })
 
-  const displayValue = useTransform(springCount, (latest) => 
+  const displayValue = useTransform(springCount, (latest) =>
     `${prefix}${Math.floor(latest)}${suffix}`
   )
 
@@ -46,7 +46,7 @@ export function Hero() {
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
 
   return (
-    <section 
+    <section
       ref={containerRef}
       className="relative min-h-[100dvh] flex flex-col items-center justify-center bg-primary text-primary-foreground overflow-hidden px-4 pt-38 md:pt-40 pb-20"
     >
@@ -54,29 +54,29 @@ export function Hero() {
       <MotionBackground />
 
       {/* Parallax Background Grid (using CSS + Motion) */}
-      <motion.div 
+      <motion.div
         style={{ y: y1 }}
-        className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff10_1px,transparent_1px),linear-gradient(to_bottom,#ffffff10_1px,transparent_1px)] bg-[size:4rem_4rem]" 
+        className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff10_1px,transparent_1px),linear-gradient(to_bottom,#ffffff10_1px,transparent_1px)] bg-[size:4rem_4rem]"
       />
 
-      <motion.div 
+      <motion.div
         style={{ opacity }}
         className="relative z-10 max-w-7xl mx-auto text-center"
         initial="hidden"
         animate="visible"
         variants={{
           hidden: { opacity: 0 },
-          visible: { 
+          visible: {
             opacity: 1,
-            transition: { 
+            transition: {
               staggerChildren: 0.2,
               delayChildren: 0.3
-            } 
+            }
           }
         }}
       >
         {/* Location badge */}
-        <motion.div 
+        <motion.div
           variants={{
             hidden: { y: 20, opacity: 0 },
             visible: { y: 0, opacity: 1 }
@@ -92,7 +92,7 @@ export function Hero() {
         <KineticTitle text="TRCT.IN" />
 
         {/* Tagline */}
-        <motion.div 
+        <motion.div
           variants={{
             hidden: { scale: 0.8, opacity: 0 },
             visible: { scale: 1, opacity: 1 }
@@ -106,7 +106,7 @@ export function Hero() {
         </motion.div>
 
         {/* CTA */}
-        <motion.div 
+        <motion.div
           variants={{
             hidden: { y: 50, opacity: 0 },
             visible: { y: 0, opacity: 1 }
@@ -119,7 +119,7 @@ export function Hero() {
             asChild
             className="w-full sm:w-auto text-base sm:text-lg px-6 lg:px-8 py-6 sm:py-6 font-bold hover:shadow-[8px_8px_0_0_#fff] active:translate-y-0.5 active:translate-x-0.5 transition-all duration-300 border-2 border-white bg-white text-primary hover:bg-white/90 group relative overflow-hidden"
           >
-            <motion.a 
+            <motion.a
               href="#join"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -142,18 +142,18 @@ export function Hero() {
         {/* Stats */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 mt-16 sm:mt-20 mb-20 sm:mb-32 max-w-3xl mx-auto w-full px-2 sm:px-0">
           {[
-            { number: "2000+", label: "CULT MEMBERS" },
+            { number: "3000+", label: "CULT MEMBERS" },
             { number: "40+", label: "EVENTS RUN" },
             { number: "100%", label: "PURE ENERGY" },
           ].map((stat, i) => (
-            <motion.div 
+            <motion.div
               key={i}
               variants={{
                 hidden: { scale: 0, rotate: -10 },
                 visible: { scale: 1, rotate: 0 }
               }}
-              whileHover={{ 
-                scale: 1.05, 
+              whileHover={{
+                scale: 1.05,
                 rotate: i % 2 === 0 ? 1 : -1,
                 backgroundColor: "#ffffff",
                 color: "#dc2626"
@@ -174,13 +174,13 @@ export function Hero() {
       {/* Floating Decorative Elements Removed */}
 
       {/* Scroll indicator */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2, duration: 1 }}
         className="absolute bottom-12 left-1/2 -translate-x-1/2"
       >
-        <motion.div 
+        <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           className="w-6 h-10 border-2 border-white rounded-full flex items-start justify-center p-2"

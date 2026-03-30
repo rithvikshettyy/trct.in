@@ -22,10 +22,16 @@ export default function AboutPage() {
       specialty: "Community Building",
     },
     {
-      name: "Shradda Mahale",
+      name: "Shraddha Mahale",
       role: "Co-Founder & Culture Lead",
       bio: "The heartbeat of the Run Club. Shradda's infectious energy and dedication to creating an inclusive running culture makes every run unforgettable.",
       specialty: "Culture & Inclusivity",
+    },
+    {
+      name: "Viraj Dhaigude",
+      role: "Co-Founder",
+      bio: "The amplifier of the movement. Viraj connects the club's energy with the world, driving the vision forward through strategic partnerships and unapologetic brand building.",
+      specialty: "Marketing and Sponsorships",
     },
   ]
 
