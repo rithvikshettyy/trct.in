@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     siteName: "The Run Club Thane",
     images: [
       {
-        url: "/trct_logo-bg.png",
+        url: "/vault/trct_logo-bg.png",
         width: 1200,
         height: 630,
         alt: "The Run Club Thane Logo",
