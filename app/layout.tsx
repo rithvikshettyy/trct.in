@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     siteName: "The Run Club Thane",
     images: [
       {
-        url: "/trct_logo-bg.png",
+        url: "https://trct.in/trct_logo-bg.png",
         width: 1200,
         height: 630,
         alt: "The Run Club Thane Logo",
@@ -91,7 +91,7 @@ export const metadata: Metadata = {
     description: "Join Thane's most electrifying running community every Sunday at 7 AM. Not a club, a CULT.",
     creator: "@TRCT",
     site: "@TRCT",
-    images: ["/trct_logo-bg.png"],
+    images: ["https://trct.in/trct_logo-bg.png"],
   },
   robots: {
     index: true,
