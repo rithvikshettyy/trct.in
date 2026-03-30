@@ -135,11 +135,11 @@ export default function AboutPage() {
           {/* Stats Section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0 bg-primary text-white p-10 md:p-12 border-4 border-white mb-16">
             <div className="text-center md:border-r-2 border-white/30 md:px-4">
-              <p className="text-5xl md:text-5xl lg:text-6xl font-black">500+</p>
+              <p className="text-5xl md:text-5xl lg:text-6xl font-black">1000+</p>
               <p className="font-mono text-sm uppercase tracking-widest mt-2 opacity-90">Active Members</p>
             </div>
             <div className="text-center md:border-r-2 border-white/30 md:px-4">
-              <p className="text-5xl md:text-5xl lg:text-6xl font-black">52</p>
+              <p className="text-5xl md:text-5xl lg:text-6xl font-black">40+</p>
               <p className="font-mono text-sm uppercase tracking-widest mt-2 opacity-90">Events Hosted</p>
             </div>
             <div className="text-center md:px-4">
