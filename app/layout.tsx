@@ -17,10 +17,10 @@ const spaceMono = Space_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "The Run Club Thane | Best Running Club in Thane",
+    default: "The Run Club Thane | Best Running Community in Thane",
     template: "%s | The Run Club Thane",
   },
-  description: "Join TRCT.IN — the best running club in Thane for Gen Z. Join Thane's most electrifying running community every Sunday at 7 AM. Not a club, a CULT.",
+  description: "Join The Run Club Thane (TRCT), the city's most electrifying running community. We meet every Sunday at 7 AM. All paces welcome. Not just a club, a CULT.",
   keywords: [
     "runclub in thane",
     "best runclub in thane",
@@ -70,8 +70,8 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "The Run Club Thane | Best Running Club in Thane",
-    description: "Join Thane's most electrifying running community every Sunday at 7 AM. Not a club, a CULT.",
+    title: "The Run Club Thane | Best Running Community in Thane",
+    description: "Join The Run Club Thane (TRCT), the city's most electrifying running community. We meet every Sunday at 7 AM. All paces welcome. Not just a club, a CULT.",
     url: "https://trct.in",
     siteName: "The Run Club Thane",
     images: [
@@ -87,8 +87,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Run Club Thane | Best Running Club in Thane",
-    description: "Join Thane's most electrifying running community every Sunday at 7 AM. Not a club, a CULT.",
+    title: "The Run Club Thane | Best Running Community in Thane",
+    description: "Join The Run Club Thane (TRCT), the city's most electrifying running community. We meet every Sunday at 7 AM. All paces welcome. Not just a club, a CULT.",
     creator: "@TRCT",
     site: "@TRCT",
     images: ["https://trct.in/trct_logo-bg.png"],
