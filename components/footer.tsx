@@ -6,7 +6,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
-          <div>
+          <div className="-mt-10 md:-mt-19">  {/* c to  change logo position */}
             <div className="mb-[-55px]">
               <Logo className="scale-[1.2] origin-left -ml-14" />
             </div>
