@@ -109,6 +109,12 @@ export const metadata: Metadata = {
     shortcut: "/trct_logo.png",
     apple: "/trct_logo.png",
   },
+  verification: {
+    google: "iVMlY9u9rEpVuJDK6m5LwBf1G_lYRSDt5kQzrVQjzOQ",
+    other: {
+      "msvalidate.01": "FEB60091BBFFB210958EEE9483F1BD85",
+    },
+  },
 }
 
 export const viewport: Viewport = {

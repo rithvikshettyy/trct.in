@@ -1,5 +1,5 @@
 export const allWeeks = [
-  { week: 40, date: "Trail Run Festival", link: "https://drive.google.com/drive/folders/1dAIf2NYGqrJ4pQyWfxzu2eKuQeHFaIds", thumbnail: "/vault/week40.jpg" },
+  { week: 40, date: "Trail Run Festival", link: "https://drive.google.com/drive/folders/1dAIf2NYGqrJ4pQyWfxzu2eKuQeHFaIds", thumbnail: "/vault/week40.JPG" },
   { week: 39, date: "Recent Run", link: "https://drive.google.com/drive/folders/1blL74WywIhXfQf_nd7uGunmlg4dANZVS", thumbnail: "/vault/week39.png" },
   { week: 38, date: "Previous Run", link: "https://drive.google.com/drive/folders/1drLsI0EPYxLGl6VhBzNTdcSywjUq0L5R", thumbnail: "/vault/week38.png" },
   { week: 37, date: "Past Run", link: "https://drive.google.com/drive/folders/1SYAD7filRbC0l1y6c0E6B308ndi4iLNf", thumbnail: "/vault/week37.png" },
@@ -13,7 +13,7 @@ export const allWeeks = [
   { week: 29, date: "Past Run", link: "#", thumbnail: "" },
   { week: 28, date: "Past Run", link: "#", thumbnail: "" },
   { week: 27, date: "Past Run", link: "#", thumbnail: "" },
-  { week: 26, date: "Past Run", link: "https://drive.google.com/drive/folders/1f7_1mGDrCSrFHuZ5CW-udGt_vamhX6Vq", thumbnail: "/vault/week26.jpg" },
+  { week: 26, date: "Past Run", link: "https://drive.google.com/drive/folders/1f7_1mGDrCSrFHuZ5CW-udGt_vamhX6Vq", thumbnail: "/vault/week26.JPG" },
   { week: 25, date: "Past Run", link: "#", thumbnail: "" },
   { week: 24, date: "Past Run", link: "#", thumbnail: "" },
   { week: 23, date: "Past Run", link: "#", thumbnail: "" },
@@ -34,9 +34,9 @@ export const allWeeks = [
   { week: 8, date: "Past Run", link: "#", thumbnail: "" },
   { week: 7, date: "Past Run", link: "#", thumbnail: "" },
   { week: 6, date: "Past Run", link: "#", thumbnail: "" },
-  { week: 5, date: "Past Run", link: "https://drive.google.com/drive/folders/12AevZW9mL3pDaj9oNRnamrvzgGLL2I9m", thumbnail: "/vault/week5.jpg" },
+  { week: 5, date: "Past Run", link: "https://drive.google.com/drive/folders/12AevZW9mL3pDaj9oNRnamrvzgGLL2I9m", thumbnail: "/vault/week5.JPG" },
   { week: 4, date: "Past Run", link: "https://drive.google.com/drive/folders/1sGpZb04xxPRKOieA9WbXR8EQAAuF8YqA", thumbnail: "/vault/week4.png" },
-  { week: 3, date: "Past Run", link: "https://drive.google.com/drive/folders/1jCvlS6FaIxDSFDtJSk46V21HkHMc3MTK", thumbnail: "/vault/week3.jpg" },
+  { week: 3, date: "Past Run", link: "https://drive.google.com/drive/folders/1jCvlS6FaIxDSFDtJSk46V21HkHMc3MTK", thumbnail: "/vault/week3.JPG" },
   { week: 2, date: "Past Run", link: "https://drive.google.com/drive/folders/1WmPR9xPorAkPwdpKWadsDuoGyFTLSYzW", thumbnail: "/vault/week2.png" },
   { week: 1, date: "First Run", link: "https://drive.google.com/drive/folders/1FolzxkL_4oeR_EKHIL5cO1PPMl0vtjWV", thumbnail: "/vault/week1.png" },
 ]
