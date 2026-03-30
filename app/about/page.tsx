@@ -143,8 +143,8 @@ export default function AboutPage() {
               <p className="font-mono text-sm uppercase tracking-widest mt-2 opacity-90">Events Hosted</p>
             </div>
             <div className="text-center md:px-4">
-              <p className="text-5xl md:text-5xl lg:text-6xl font-black">5K+</p>
-              <p className="font-mono text-sm uppercase tracking-widest mt-2 opacity-90">Miles Run</p>
+              <p className="text-5xl md:text-5xl lg:text-6xl font-black">60K+</p>
+              <p className="font-mono text-sm uppercase tracking-widest mt-2 opacity-90">Kms Run</p>
             </div>
           </div>
 
