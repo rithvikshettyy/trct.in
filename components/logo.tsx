@@ -9,7 +9,7 @@ export function Logo({ className = "" }: { className?: string }) {
       className={`inline-block ${className}`}
     >
       <Image
-        src="/trct_logo.png"
+        src="/trct_logo-bg.png"
         alt="The Run Club Thane Logo"
         width={200}
         height={67}
