@@ -1,6 +1,17 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Zap, Users, Flame } from "lucide-react"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description: "A CULT. Born from passion. Built by Gen Z. For Gen Z. The Run Club Thane isn't about running faster—it's about running together.",
+  openGraph: {
+    title: "About Us | The Run Club Thane",
+    description: "A CULT. Born from passion. Built by Gen Z. For Gen Z. The Run Club Thane isn't about running faster—it's about running together.",
+    url: "https://trct.in/about",
+  },
+}
 
 export default function AboutPage() {
   const founders = [

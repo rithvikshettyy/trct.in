@@ -1,6 +1,17 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Calendar, MapPin, Clock, Users, Route } from "lucide-react"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Event Calendar",
+  description: "Join the movement. Feel the energy. Check out the upcoming runs and events hosted by the best running club in Thane.",
+  openGraph: {
+    title: "Event Calendar | The Run Club Thane",
+    description: "Join the movement. Feel the energy. Check out the upcoming runs and events hosted by the best running club in Thane.",
+    url: "https://trct.in/events",
+  },
+}
 
 export default function EventsPage() {
   const upcomingEvents = [

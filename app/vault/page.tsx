@@ -5,6 +5,17 @@ import Link from "next/link"
 import Image from "next/image"
 
 import { allWeeks } from "@/lib/vault-data"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "The Vault",
+  description: "Every route. Every run. Every vibe. The complete visual archive from Week 1 to present.",
+  openGraph: {
+    title: "The Vault | The Run Club Thane",
+    description: "Every route. Every run. Every vibe. The complete visual archive from Week 1 to present.",
+    url: "https://trct.in/vault",
+  },
+}
 
 export default function VaultPage() {
 

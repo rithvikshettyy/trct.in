@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     siteName: "The Run Club Thane",
     images: [
       {
-        url: "/trct_logo.png",
+        url: "/trct_logo-bg.png",
         width: 1200,
         height: 630,
         alt: "The Run Club Thane Logo",
@@ -89,7 +89,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "The Run Club Thane | Best Running Club in Thane",
     description: "Join Thane's most electrifying running community every Sunday at 7 AM. Not a club, a CULT.",
-    images: ["/trct_logo.png"],
+    creator: "@TRCT",
+    site: "@TRCT",
+    images: ["/trct_logo-bg.png"],
   },
   robots: {
     index: true,
@@ -103,15 +105,9 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: [
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
-      {
-        url: "/trct_logo.png",
-      },
-    ],
+    icon: "/trct_logo.png",
+    shortcut: "/trct_logo.png",
+    apple: "/trct_logo.png",
   },
 }
 
