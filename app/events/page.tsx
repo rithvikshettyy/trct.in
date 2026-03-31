@@ -18,7 +18,7 @@ export default function EventsPage() {
     {
       week: 41,
       date: "April 05, 2026",
-      title: "UPCOMING",
+      title: "Sunday Morning Run",
       time: "7:00 AM",
       location: "Flour & Feine, Hiranandani Meadows",
       mapLink: "https://share.google/aKYcWMODKIM0hfamy",
