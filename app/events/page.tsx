@@ -16,6 +16,17 @@ export const metadata: Metadata = {
 export default function EventsPage() {
   const upcomingEvents = [
     {
+      week: 41,
+      date: "April 05, 2026",
+      title: "UPCOMING",
+      time: "7:00 AM",
+      location: "Flour & Feine, Hiranandani Meadows",
+      mapLink: "https://share.google/aKYcWMODKIM0hfamy",
+      registrationLink: "https://luma.com/zltbur6x",
+      distance: "5K, 10K",
+      attendees: "100+",
+    },
+    {
       week: 40,
       date: "March 29, 2026",
       title: "Trail Run Festival",
