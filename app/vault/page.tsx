@@ -30,9 +30,16 @@ export default async function VaultPage() {
     thumbnail
   }`
   
-  const fetchedRuns = await client.fetch(query)
+  let fetchedRuns: any[] = []
+  try {
+    if (process.env.NEXT_PUBLIC_SANITY_PROJECT_ID) {
+      fetchedRuns = await client.fetch(query)
+    }
+  } catch (err) {
+    console.warn('Sanity fetch failed, using local fallback data:', err)
+  }
   
-  // Merge Sanity data with local fallback data
+
   const mergedWeeksMap = new Map()
   allWeeks.forEach(item => mergedWeeksMap.set(item.week, item))
   

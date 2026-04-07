@@ -33,7 +33,14 @@ export default async function EventsPage() {
     thumbnail
   }`
   
-  const fetchedEvents = await client.fetch(query)
+  let fetchedEvents: any[] = []
+  try {
+    if (process.env.NEXT_PUBLIC_SANITY_PROJECT_ID) {
+      fetchedEvents = await client.fetch(query)
+    }
+  } catch (err) {
+    console.warn('Sanity fetch failed, using local fallback data:', err)
+  }
 
   // Local fallback data
   const localEvents = [
