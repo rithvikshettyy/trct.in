@@ -23,6 +23,8 @@ export const metadata: Metadata = {
   description: "Join The Run Club Thane (TRCT), the city's most electrifying running community. We meet every Sunday at 7 AM. All paces welcome. Not just a club, a CULT.",
   keywords: [
     "runclub in thane",
+    "club in thane",
+    "thane",
     "best runclub in thane",
     "thane run club",
     "TRCT",

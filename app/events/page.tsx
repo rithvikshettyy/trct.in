@@ -2,6 +2,12 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Calendar, MapPin, Clock, Users, Route } from "lucide-react"
 import { Metadata } from "next"
+import Image from "next/image"
+
+import { client } from "../../sanity/lib/client"
+import { urlForImage } from "../../sanity/lib/image"
+
+export const revalidate = 60
 
 export const metadata: Metadata = {
   title: "Event Calendar",
@@ -13,8 +19,24 @@ export const metadata: Metadata = {
   },
 }
 
-export default function EventsPage() {
-  const upcomingEvents = [
+export default async function EventsPage() {
+  const query = `*[_type == "event"] | order(week desc) {
+    week,
+    date,
+    title,
+    time,
+    location,
+    mapLink,
+    registrationLink,
+    distance,
+    attendees,
+    thumbnail
+  }`
+  
+  const fetchedEvents = await client.fetch(query)
+
+  // Local fallback data
+  const localEvents = [
     {
       week: 41,
       date: "April 05, 2026",
@@ -25,6 +47,7 @@ export default function EventsPage() {
       registrationLink: "https://luma.com/zltbur6x",
       distance: "5K, 10K",
       attendees: "100+",
+      thumbnail: null
     },
     {
       week: 40,
@@ -36,6 +59,7 @@ export default function EventsPage() {
       registrationLink: "https://go.playo.app/PLAYOO/-7NEX",
       distance: "5K",
       attendees: "100+",
+      thumbnail: null
     },
     {
       week: 39,
@@ -47,6 +71,7 @@ export default function EventsPage() {
       registrationLink: "https://go.playo.app/PLAYOO/HLq1Y",
       distance: "3K, 5K, 10K",
       attendees: "100+",
+      thumbnail: null
     },
     {
       week: 37,
@@ -58,6 +83,7 @@ export default function EventsPage() {
       registrationLink: "",
       distance: "3K, 5K, 10K",
       attendees: "200+",
+      thumbnail: null
     },
     {
       week: 36,
@@ -69,6 +95,7 @@ export default function EventsPage() {
       registrationLink: "",
       distance: "3K, 5K, 10K",
       attendees: "150+",
+      thumbnail: null
     },
     {
       week: 35,
@@ -80,10 +107,28 @@ export default function EventsPage() {
       registrationLink: "",
       distance: "3K, 5K, 10K",
       attendees: "120+",
+      thumbnail: null
     },
   ]
 
+  // Map to the existing structure, adding fallback values if field is omitted
+  const mappedSanityEvents = fetchedEvents.map((evt: any) => ({
+    week: evt.week || 0,
+    date: evt.date ? new Date(evt.date).toLocaleDateString("en-US", { month: "long", day: "2-digit", year: "numeric", timeZone: "UTC" }) : "TBD",
+    title: evt.title || "TBD",
+    time: evt.time || "7:00 AM",
+    location: evt.location || "TBD",
+    mapLink: evt.mapLink || "",
+    registrationLink: evt.registrationLink || "",
+    distance: evt.distance || "TBD",
+    attendees: evt.attendees || "TBD",
+    thumbnail: evt.thumbnail || null
+  }))
+
+  const upcomingEvents = mappedSanityEvents.length > 0 ? mappedSanityEvents : localEvents
+
   const isEventPast = (dateStr: string) => {
+    if (dateStr === "TBD") return false
     const eventDate = new Date(dateStr)
     eventDate.setHours(0, 0, 0, 0)
     const today = new Date()
@@ -108,6 +153,7 @@ export default function EventsPage() {
       registrationLink: "",
       distance: "TBD",
       attendees: "TBD",
+      thumbnail: null
     })
   }
 
@@ -134,9 +180,19 @@ export default function EventsPage() {
             {allEvents.map((event, idx) => (
               <div
                 key={idx}
-                className="border-4 border-primary p-8 hover:bg-primary hover:text-white transition-all duration-300 group cursor-pointer hover:-translate-y-2 hover:shadow-[8px_8px_0_0_#000]"
+                className="border-4 border-primary p-8 hover:bg-primary hover:text-white transition-all duration-300 group cursor-pointer hover:-translate-y-2 hover:shadow-[8px_8px_0_0_#000] flex flex-col"
               >
-                <div className="flex items-start justify-between mb-4">
+                {event.thumbnail && (
+                  <div className="w-full aspect-[4/3] mb-6 block relative overflow-hidden border-2 border-primary group-hover:border-white transition-colors duration-300 shrink-0">
+                    <Image
+                      src={urlForImage(event.thumbnail)?.url() || ""}
+                      alt={event.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                )}
+                <div className="flex items-start justify-between mb-4 mt-auto">
                   <div className="flex-1">
                     <div className="flex items-center gap-3">
                       <p className="font-mono text-sm font-bold opacity-75 group-hover:opacity-100">{event.date}</p>

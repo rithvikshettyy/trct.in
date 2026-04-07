@@ -7,6 +7,11 @@ import Image from "next/image"
 import { allWeeks } from "@/lib/vault-data"
 import { Metadata } from "next"
 
+import { client } from "../../sanity/lib/client"
+import { urlForImage } from "../../sanity/lib/image"
+
+export const revalidate = 60
+
 export const metadata: Metadata = {
   title: "The Vault",
   description: "Every route. Every run. Every vibe. The complete visual archive from Week 1 to present.",
@@ -17,7 +22,30 @@ export const metadata: Metadata = {
   },
 }
 
-export default function VaultPage() {
+export default async function VaultPage() {
+  const query = `*[_type == "vaultRun"] | order(week desc) {
+    week,
+    dateLabel,
+    link,
+    thumbnail
+  }`
+  
+  const fetchedRuns = await client.fetch(query)
+  
+  // Merge Sanity data with local fallback data
+  const mergedWeeksMap = new Map()
+  allWeeks.forEach(item => mergedWeeksMap.set(item.week, item))
+  
+  fetchedRuns.forEach((run: any) => {
+    mergedWeeksMap.set(run.week, {
+      week: run.week,
+      date: run.dateLabel || "Past Run",
+      link: run.link || "#",
+      thumbnail: run.thumbnail ? urlForImage(run.thumbnail)?.url() || "" : ""
+    })
+  })
+
+  const finalWeeks = Array.from(mergedWeeksMap.values()).sort((a, b) => b.week - a.week)
 
   return (
     <main className="min-h-screen bg-background text-foreground pt-32 pb-10">
@@ -40,7 +68,7 @@ export default function VaultPage() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-32">
-          {allWeeks.map((item) => (
+          {finalWeeks.map((item) => (
             <a
               key={item.week}
               href={item.link}
