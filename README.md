@@ -4,7 +4,7 @@
 
 Join Thane's most electrifying running community. Every Sunday. Gen Z energy. Pure cult vibes.
 
-![TRCT Logo](public/trct_logo.png)
+# ![TRCT Logo](public/trct_logo.png)
 
 ## ⚡ Overview
 
